@@ -73,3 +73,13 @@ for (let book in books){
 }
 
 console.log(lessRentedBook.title + ' avec : ' + lessRentedBook.rented )
+
+console.log(' ')
+console.log("*********************************************");
+console.log(' ')
+
+console.log("Le livre avec l'ID: 873495 est: ")
+
+const bookById = books.find(book => book.id === 873495);
+console.log(bookById.title);
+
