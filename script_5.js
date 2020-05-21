@@ -83,3 +83,27 @@ console.log("Le livre avec l'ID: 873495 est: ")
 const bookById = books.find(book => book.id === 873495);
 console.log(bookById.title);
 
+console.log(' ')
+console.log("*********************************************");
+console.log(' ')
+
+console.log("Supprimer le livre avec l'ID: 133712")
+books.splice(books.findIndex(book => book.id == 133712), 1);
+console.log(books)
+
+
+console.log(' ')
+console.log("*********************************************");
+console.log(' ')
+
+console.log("livres par ordre alphabétique:");
+
+books.sort(function(a, b){
+  if(a.title < b.title) { return -1; }
+  if(a.title > b.title) { return 1; }
+  return 0;
+})
+
+let filteredBooksByAlphabet = books.filter(function(book) {
+  return console.log(book.title);
+});
